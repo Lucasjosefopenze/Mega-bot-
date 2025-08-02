@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROBO AVIATOR</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1b4b, #7e22ce, #dc2626);
+      background-size: 600% 600%;
+      animation: gradientMove 10s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      color: #ff4d4f;
+      text-shadow: 2px 2px 8px #00000080;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      background-color: #f87171;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 0 10px #dc2626;
+    }
+
+    .counter {
+      font-size: 1rem;
+      margin-top: 1rem;
+      color: #ffe4e6;
+      font-style: italic;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      color: #ffe4e6;
+    }
+
+    button {
+      background: linear-gradient(to right, #ef4444, #dc2626);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 20px #f87171cc;
+      animation: pulseBtn 1.2s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    @keyframes pulseBtn {
+      0%, 100% {
+        box-shadow: 0 0 20px #f87171cc;
+      }
+      50% {
+        box-shadow: 0 0 40px #fb7185, 0 0 60px #ef4444;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .lead {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.postimg.cc/0NxPPZMz/Picsart-25-02-17-16-18-15-030.jpg" alt="Cabeçalho ROBO AVIATOR" />
+  </header>
+
+  <div class="container">
+    <div class="lead">
+      ⚠️ Para baixar o ROBO você precisa entrar no grupo primeiro!
+    </div>
+
+    <h1>🚀 ROBO AVIATOR</h1>
+
+    <p>Receba sinais poderosos, lucros ao vivo e acesso imediato ao nosso sistema automatizado.</p>
+
+    <button id="whatsappBtn">Entrar no grupo</button>
+
+    <div class="counter">
+      1.002 pessoas já solicitaram acesso — <strong>Vagas limitadas!</strong>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("whatsappBtn").addEventListener("click", () => {
+      window.open("https://abre.ai/grupo-vip-de-membros", "_blank");
+      setTimeout(() => {
+        window.location.href = "pagina2.html";
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
